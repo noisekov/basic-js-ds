@@ -17,23 +17,15 @@ class Stack {
     this.arr = [];
   }
   push(element) {
-    this.arr.push(element)
-    // throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    this.arr.push(element);
   }
-
   pop() {
-    let lastEl = this.arr.at(-1);
+    const lastEl = this.arr.at(-1);
     this.arr.pop();
     return lastEl;
-    // throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
   }
-
   peek() {
     return this.arr.at(-1);
-    // throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
   }
 }
 
