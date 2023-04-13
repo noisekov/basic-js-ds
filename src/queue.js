@@ -18,10 +18,22 @@ class Queue {
     this.queue = [];
   }
   getUnderlyingList() {
+    throw new NotImplementedError('Not implemented');
     let resultObj = {};
     for (let prop in this.queue) {
-      resultObj['value'] = this.queue[prop];
-      resultObj['next'] = null;
+      if (this.queue.length > 1) {
+        if(resultObj['value'] === undefined) {
+          resultObj['value'] = this.queue[prop];
+        }
+        if (resultObj['next'] === undefined) {
+          resultObj['next'] = null;
+        } else {
+          let obj = Object.create(resultObj);
+          resultObj['next'] = obj;
+          obj['value'] = this.queue[prop];
+          obj['next'] = null;
+        }
+      }
     }
     return resultObj;
   }
