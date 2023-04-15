@@ -17,7 +17,6 @@ class Queue {
   constructor () {
     this.head = null;
     this.tail = null;
-    this.length = 0;
   }
   getUnderlyingList() {
     return this.head;
@@ -32,12 +31,10 @@ class Queue {
       this.tail.next = node;
       this.tail = node;
     }
-    this.length++;
   }
   dequeue() {
     let last = this.head;
     this.head = this.head.next;
-    this.length--;
 
     return last.value;
   }
