@@ -44,24 +44,16 @@ function removeKFromList(l, k) {
     // PLEASE DONT WATCH THIS CODE I KNOW THAT I NEED TO USE RECURSION I DONT KNOW HOW TO REALISE IT(
 
     // while (l.next !== null) {
-    //   if (l.next.next.value === newNode.value) {
-    //     l.next = removeKFromList(l.next.next.next, newNode);
-    //   }
     //   if (l.value === newNode.value) {
-    //     l.value = removeKFromList(l.next.value, newNode);
+    //     l.value = l.next.value;
     //   }
-    //   return l
+    //   if (l.next.next.value === newNode.value) {
+    //     l.next = l.next.next.next;
+    //   }
+    //   l.next = l.next.next;
     // }
-
-  // while (l.next !== null) {
-  //   if (l.next.next.value === newNode.value) {
-  //     l.next = l.next.next.next
-  //   }
-  //   if (l.value === newNode.value) {
-  //     l.value = l.next.value;
-  //   }
-  //   return removeKFromList(l.next, newNode);
-  // }
+    // console.debug(l)
+    // return l
 }
 
 module.exports = {
