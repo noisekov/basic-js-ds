@@ -57,11 +57,11 @@ class BinarySearchTree {
         return null;
       }
 
-      if (nodeTree === data) {
+      if (nodeTree.data === data) {
         return nodeTree;
       }
 
-      if (data < nodeTree) {
+      if (data < nodeTree.data) {
         nodeTree = findDataIntree(nodeTree.left, data);
       } else {
         nodeTree = findDataIntree(nodeTree.right, data);
